@@ -1,0 +1,184 @@
+
+/* unidades relativas 
+rem y em */
+
+/* 1rem 16px */
+/* 1em toma el valor del contenedor mas cercano */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);   
+}
+.bodycontacto{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);   
+}
+
+/* Estilos de header */
+
+header{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1{
+    margin-bottom: 15px;
+}
+header nav ul{
+    display: flex;
+    column-gap: 10px;
+}
+
+
+header nav ul{
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+header nav ul li{
+    /* PARA SACAR LOS PUNTITOS */
+    list-style: none;
+    background-color: whitesmoke;
+    padding: 5px;
+    /* BORDER RADIUS ES PARA HACERLO CIRCULAR */
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+}
+header nav ul li:hover{
+    list-style: none;
+    background-color: rgb(103, 103, 103);
+    box-shadow: 1px 1px 10px black;
+    transform: scale(90%);
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 5px;
+}
+
+/* Estilos del main */
+main{
+    display: grid;
+    grid-template-areas: 
+                        "main-p main-p"
+                        "imagen-uno imagen-dos"
+                        "imagen-tres imagen-cuatro"
+                        "parrafo parrafo";
+    column-gap: 1.8rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-p{
+    margin-top: 3rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+    grid-area: main-p;
+    font-size: 1.7rem;
+}
+
+/* CLASE DE TODAS LAS IMAGENES */
+.iphone{
+    transform: rotate(360deg);
+    width: 300px;
+    height: 300px;
+}
+.iphone:hover{
+    transform: scale(119%);
+    transition: 1s;
+    width: 300px;
+    height: 300px;
+}
+/* CLASES DE LOS DIV (GRIDS) */
+.imagen-uno{
+    grid-area: imagen-uno;
+}
+
+.imagen-dos{
+    grid-area: imagen-dos;
+}   
+.fondo{
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9rem;
+}
+.imagen-tres{
+    grid-area: imagen-tres;
+}
+
+.imagen-cuatro{
+    grid-area: imagen-cuatro;
+}
+
+/* --- SEPARADOR ---- */
+.parrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    grid-area: parrafo;
+}
+.uwu{
+    transform: rotate(360deg);
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uwu:hover{
+    transform: scale(119%);
+    transition: 1s;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-nosotros{
+    display: none;
+    margin-bottom: 5rem;
+}
+
+/* mediaqueries */
+
+@media screen and (min-width:600px){
+    body{
+        background-color: #0d1a5a;
+        background-image: linear-gradient(43deg, #05091f 0%, #772871 46%, #c68a1a 100%);
+    }
+    .bodycontacto{
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);   
+    }
+    main{
+        grid-template-areas: 
+                            "main-p main-p main-p main-p"
+                            "img-nosotros img-nosotros img-nosotros img-nosotros"
+                            "imagen-uno imagen-dos imagen-tres imagen-cuatro"
+                            "parrafo parrafo parrafo parrafo";
+        column-gap: 1.8rem;
+    }
+    .img-nosotros{
+        grid-area: img-nosotros;
+        display: block;
+    }
+}
+@media screen and (min-width:900px){
+    
+}
